@@ -1,2 +1,21 @@
 @import 'common.scss';
 
+.chat-name {
+  display: inline-block;
+  width: 150px;
+  padding: 0px 10px;
+  margin: 10px 0px;
+  border-right: 2px solid #999;
+  font-weight: bold;
+  line-height: 100%;
+}
+
+.chat-msg {
+  display: inline-block;
+  padding-left: 20px;
+}
+
+.chat-date {
+  font-size: 10px;
+  color: #ccc;
+}
