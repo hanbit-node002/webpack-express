@@ -2,11 +2,14 @@ var path = require('path');
 
 module.exports = {
     context: path.join(__dirname, 'client'),
-    entry: './js/index',
+    entry: {
+        index: './js/index',
+        socket: './js/socket'
+    },
     output: {
         path: path.join(__dirname, 'server/public'),
         publicPath: "/",
-        filename: 'js/bundle.js'
+        filename: 'js/[name].bundle.js'
     },
     resolve: {
         extensions: ['.js']
@@ -22,7 +25,7 @@ module.exports = {
                 loader: 'sass-loader',
                 options: {
                     includePaths: [
-                        'client/style/common'
+                        'client/style'
                     ]
                 }
             }]
